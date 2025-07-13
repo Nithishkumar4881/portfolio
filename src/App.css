@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    @apply m-0 p-0 box-border scroll-smooth;
+}
+header nav ul li {
+    @apply hover:bg-white hover:text-sky-500 transition-colors duration-300;
+}
+
+header nav ul li a {
+    @apply px-5 py-1 font-light block w-full;
+}
+
+.nav ul li {
+    @apply py-1 border-b border-white relative w-full rounded-sm;
+}
