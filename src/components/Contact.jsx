@@ -20,7 +20,7 @@ export const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Handle form submission logic here
-  fetch('http://localhost:3000/mailer', {
+  fetch('https://portfolio-back-rbhr.onrender.com/mailer', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
