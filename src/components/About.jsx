@@ -6,8 +6,8 @@ export const About = () => {
   return (
     <>
 
-      <section className='bg-white py-10 px-6 md:px-20' id="about">
-        <h1 className="text-4xl font-bold text-center mt-1 mb-2">About <span className="text-yellow-500">Me</span></h1>
+      <section className='bg-white mt-3 px-6 md:px-20' id="about">
+        <h1 className="text-4xl font-bold text-center mb-2">About <span className="text-yellow-500">Me</span></h1>
         
         
           <p className='text-3xl text-left bg-white text-yellow-600'>Education</p>
@@ -40,12 +40,12 @@ export const About = () => {
           <div className='border-slate-300 md:w-1/2 border-[2px] rounded-sm p-4 my-4'>
             <p className='text-lg m-4 font-bold'><span className='text-yellow-600'>Portfolio Website -</span> <span className='text-xl font-bold'>React.js</span></p>
             <p className='text-sm m-4'>A personal portfolio website to showcase my skills and projects, built using React.js and Tailwind CSS.</p>
-            <p><span className='bg-yellow-600 ms-4 p-2 rounded  xl font-bold'>2023</span></p> 
+            <p><span className='bg-yellow-600 ms-4 p-2 rounded  xl font-bold'>2025</span></p> 
             </div>
           <div className='border-slate-300 md:w-1/2 border-[2px] rounded-sm p-4 my-4'>
             <p className='text-lg m-4 font-bold'><span className='text-yellow-600'>2+ projects -</span> <span className='text-xl font-bold'>React.js</span></p>
             <p className='text-sm m-4'>Frontend only done and backend are processing.</p>
-            <p><span className='bg-yellow-600 ms-4 p-2 rounded  xl font-bold'>2023</span></p>   
+            <p><span className='bg-yellow-600 ms-4 p-2 rounded  xl font-bold'>2025</span></p>   
 
           </div>
         </div>    

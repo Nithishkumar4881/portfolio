@@ -4,6 +4,7 @@ import { HomeIcon, PhoneIcon, EnvelopeIcon} from '@heroicons/react/24/solid'
 
 export const Contact = () => {
   const [msg, setMsg] = useState(false);
+  const [emsg, seteMsg] = useState(false);
  const [formData, setFormData] = useState({
     
     email: '',
@@ -19,7 +20,16 @@ export const Contact = () => {
     });
   };
   const handleSubmit = (e) => {
-    e.preventDefault();
+  e.preventDefault();
+    // Validate form data
+    if (formData.email === '' || formData.subject === '' || formData.message === '') {
+      seteMsg(true);
+      setTimeout(() => {
+        seteMsg(false);
+      }, 3000);
+
+      return; // Assuming you have a ref for the input to focus on
+    }
     // Handle form submission logic here
   fetch('https://portfolio-back-rbhr.onrender.com/mailer', {
       method: 'POST',
@@ -63,7 +73,8 @@ export const Contact = () => {
         <textarea onChange={(e)=>handleChange(e)} name="message" value={formData.message} placeholder='Enter your message' className='border-[1px] border-sky-500 rounded-md p-2 w-[300px] md:w-[500px] h-[200px]'></textarea>
         <button onClick={(e)=>handleSubmit(e)} className='bg-yellow-600 text-white px-4 py-2 rounded-md hover:bg-yellow-700 duration-200'>Send</button>
       </form>
-      {msg && <p className='text-white bg-green-800 p-3 rounded-sm absolute top-25'>message sent!</p>}
+      {msg && <p className='text-white bg-green-800 p-3 rounded-sm absolute top-25'>Message sent !</p>}
+      {emsg && <p className='text-white bg-red-700 p-3 rounded-sm absolute top-25'>Fill the all fields !</p>}
     
       
       <div className='flex flex-col md:flex-row items-center justify-center gap-3'>

@@ -17,7 +17,7 @@ export const Skills = () => {
   return (
 
     <>
-      <h1 className='text-4xl font-bold text-center m-2'>Skil<span className='text-yellow-600'>ls</span></h1>
+      <h1 className='text-4xl font-bold text-center m-3'>Skil<span className='text-yellow-600'>ls</span></h1>
       <div  className='flex flex-col md:flex-row relative justify-center items-center gap-2 flex-wrap'>{items.map((item, index) => {
         return (
             <div key={index} className='md:text-2xl border-[1px] border-sky-500 p-1 rounded-sm text-white
