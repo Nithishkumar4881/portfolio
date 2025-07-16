@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import { HomeIcon, PhoneIcon, EnvelopeIcon} from '@heroicons/react/24/solid'
 
 export const Contact = () => {
+  const [msg, setMsg] = useState(false);
  const [formData, setFormData] = useState({
     
     email: '',
@@ -40,6 +41,14 @@ export const Contact = () => {
         subject: '',
         message: ''
       });
+
+      setMsg(true);
+      setTimeout(() => {
+        setMsg(false);
+      }, 3000);
+
+
+
   };
 
   return (
@@ -54,12 +63,15 @@ export const Contact = () => {
         <textarea onChange={(e)=>handleChange(e)} name="message" value={formData.message} placeholder='Enter your message' className='border-[1px] border-sky-500 rounded-md p-2 w-[300px] md:w-[500px] h-[200px]'></textarea>
         <button onClick={(e)=>handleSubmit(e)} className='bg-yellow-600 text-white px-4 py-2 rounded-md hover:bg-yellow-700 duration-200'>Send</button>
       </form>
+      {msg && <p className='text-white bg-green-800 p-3 rounded-sm absolute top-25'>message sent!</p>}
+    
+      
       <div className='flex flex-col md:flex-row items-center justify-center gap-3'>
       <div className='flex flex-row '><PhoneIcon className='size-8 text-sky-500' /><p className='text-xl px-2'>+91 9047544881</p></div>
       <div className='flex flex-row'><EnvelopeIcon className='size-8 text-sky-500' /><p className='text-xl px-2'>nithisk72@gmail.com</p>
       </div>
       </div>
-    
+      
 
     </div>
 
