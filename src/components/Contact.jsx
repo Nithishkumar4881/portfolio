@@ -28,9 +28,8 @@ export const Contact = () => {
         seteMsg(false);
       }, 3000);
 
-      return; // Assuming you have a ref for the input to focus on
+      return; 
     }
-    // Handle form submission logic here
   fetch('https://portfolio-back-rbhr.onrender.com/mailer', {
       method: 'POST',
       headers: {
