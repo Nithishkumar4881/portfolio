@@ -20,9 +20,9 @@ export const Skills = () => {
       <h1 className='text-4xl font-bold text-center m-3'>Skil<span className='text-yellow-600'>ls</span></h1>
       <div  className='flex flex-col md:flex-row relative justify-center items-center gap-2 flex-wrap'>{items.map((item, index) => {
         return (
-            <div key={index} className='md:text-2xl border-[1px] border-sky-500 p-1 rounded-sm text-white
-             bg-sky-500 p-2 m-5 flex w-10/12 justify-between md:w-[500px] shadow-2xl hover:scale-110 duration-100 shadow-black'>{item.name}
-             <div style={{width:`${item.percentage}%`}} className='bg-white text-sky-500 text-center md:text-xl'>{item.percentage}%</div></div>
+            <div key={index} className='md:text-2xl border-[1px] p-1 rounded-sm text-white
+             bg-yellow-600 p-2 m-5 flex w-[600px] justify-between md:w-[500px] shadow-2xl hover:scale-110 duration-100 shadow-black'>{item.name}
+             <div style={{width:`${item.percentage}%`}} className='bg-white text-yellow-600 text-center md:text-xl'>{item.percentage}%</div></div>
         )})}
       </div>
       <Link to="/about" className='text-xl font-light rounded-full bg-yellow-600 px-3 py-3 fixed top-[85%] right-0'><UserIcon className='text-white size-8'/></Link>
