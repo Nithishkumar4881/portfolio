@@ -3,23 +3,18 @@
 @tailwind utilities;
 
 *{
-    @apply m-0 p-0 box-border scroll-smooth bg-zinc-900;
+    @apply m-0 p-0 box-border scroll-smooth bg-zinc-900 text-white;
 }
-
-/* header nav ul li {
-    @apply hover:bg-white hover:text-black transition-colors duration-300;
-} */
-header{
+ 
+li a{
     @apply bg-yellow-600;
 }
-
-header nav ul li{
-    @apply bg-none;
+li{
+    
+    @apply bg-yellow-600;
 }
-header nav ul li a {
-    @apply px-5 py-1 block w-full text-gray-500 bg-none;
+ul{
+    @apply bg-yellow-600
+}nav{
+   @apply bg-yellow-600 
 }
-/* 
-.nav ul li {
-    @apply py-1 border-b border-white relative w-full rounded-sm;
-} */
